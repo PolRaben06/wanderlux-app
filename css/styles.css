@@ -192,4 +192,16 @@ input[type="number"] {
     flex: 1 1 auto; /* helps wrap nicely */
     text-align: center;
   }
+   .error {
+  margin: 6px 0 0;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.success {
+  margin-top: 12px;
+  color: #166534;
+  font-weight: 700;
+}
+
 }
