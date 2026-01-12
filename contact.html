@@ -3,12 +3,50 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact WanderLux Travel Agency for travel enquiries and support." />
   <title>Contact</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <h1>Contact</h1>
-  <p>Email: hello@wanderlux.example</p>
+  <main>
+    <h1>Contact</h1>
+    <p>Reach us using the details below or send a message.</p>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="appointment.html">Appointment</a>
+      <a href="about.html">About</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+
+    <h2>Contact Details</h2>
+    <p><strong>Address:</strong> 100 Example Street, Sydney NSW 2000</p>
+    <p><strong>Phone:</strong> (02) 0000 0000</p>
+    <p><strong>Email:</strong> hello@wanderlux.example</p>
+
+    <h2>General Enquiry Form</h2>
+    <form id="contactForm" novalidate>
+      <label for="contactName">Name</label>
+      <input id="contactName" type="text" required />
+      <p class="error" id="contactNameError"></p>
+
+      <label for="contactEmail">Email</label>
+      <input id="contactEmail" type="email" required />
+      <p class="error" id="contactEmailError"></p>
+
+      <label for="contactMessage">Message</label>
+      <textarea id="contactMessage" rows="5" required></textarea>
+      <p class="error" id="contactMessageError"></p>
+
+      <button type="submit">Send</button>
+      <button type="reset">Clear</button>
+
+      <p class="success" id="contactSuccess"></p>
+    </form>
+  </main>
+
   <script src="js/script.js"></script>
 </body>
 </html>
