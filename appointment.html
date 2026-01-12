@@ -3,16 +3,52 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Request an appointment with a WanderLux travel consultant." />
   <title>Appointment Request</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <h1>Appointment Request</h1>
-  <form>
-    <input type="text" placeholder="Name" />
-    <input type="email" placeholder="Email" />
-    <button type="submit">Submit</button>
-  </form>
+  <main>
+    <h1>Appointment Request</h1>
+    <p>Request an appointment and we will contact you to confirm your booking.</p>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="calculator.html">Calculator</a>
+      <a class="active" href="appointment.html">Appointment</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <form id="appointmentForm" novalidate>
+      <label for="apptName">Name</label>
+      <input id="apptName" type="text" required />
+      <p class="error" id="apptNameError"></p>
+
+      <label for="apptEmail">Email</label>
+      <input id="apptEmail" type="email" required />
+      <p class="error" id="apptEmailError"></p>
+
+      <label for="apptPhone">Phone</label>
+      <input id="apptPhone" type="tel" required />
+      <p class="error" id="apptPhoneError"></p>
+
+      <label for="apptDate">Preferred Date</label>
+      <input id="apptDate" type="date" required />
+      <p class="error" id="apptDateError"></p>
+
+      <label for="apptMessage">Message</label>
+      <textarea id="apptMessage" rows="5" required></textarea>
+      <p class="error" id="apptMessageError"></p>
+
+      <button type="submit">Submit</button>
+      <button type="reset">Clear</button>
+
+      <p class="success" id="apptSuccess"></p>
+    </form>
+  </main>
+
   <script src="js/script.js"></script>
 </body>
 </html>
