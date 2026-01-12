@@ -3,16 +3,59 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Estimate travel costs based on destination, travellers, duration, and travel style." />
   <title>Trip Cost Calculator</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <h1>Trip Cost Calculator</h1>
-  <form id="calcForm">
-    <input type="number" placeholder="Travellers" />
-    <input type="number" placeholder="Days" />
-    <button type="submit">Calculate</button>
-  </form>
+  <main>
+    <h1>Trip Cost Calculator</h1>
+    <p>Enter your preferences to estimate the total cost of your trip.</p>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a class="active" href="calculator.html">Calculator</a>
+      <a href="appointment.html">Appointment</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <form id="calcForm" novalidate>
+      <label for="destination">Destination</label>
+      <select id="destination" required>
+        <option value="">Select a destination</option>
+        <option value="bali">Bali</option>
+        <option value="tokyo">Tokyo</option>
+        <option value="paris">Paris</option>
+        <option value="sydney">Sydney</option>
+      </select>
+      <p class="error" id="destinationError"></p>
+
+      <label for="travellers">Number of travellers</label>
+      <input id="travellers" type="number" min="1" step="1" required />
+      <p class="error" id="travellersError"></p>
+
+      <label for="days">Number of days</label>
+      <input id="days" type="number" min="1" step="1" required />
+      <p class="error" id="daysError"></p>
+
+      <fieldset>
+        <legend>Travel style</legend>
+        <label><input type="radio" name="style" value="budget" required /> Budget</label>
+        <label><input type="radio" name="style" value="standard" /> Standard</label>
+        <label><input type="radio" name="style" value="luxury" /> Luxury</label>
+      </fieldset>
+      <p class="error" id="styleError"></p>
+
+      <button type="submit">Calculate</button>
+      <button type="reset">Reset</button>
+    </form>
+
+    <h2>Estimated Cost</h2>
+    <p id="calcResult">Fill in the form and click Calculate to see your estimate.</p>
+  </main>
+
   <script src="js/script.js"></script>
 </body>
 </html>
